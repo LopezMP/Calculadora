@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -143,7 +142,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="2"
-        app:layout_constraintBottom_toTopOf="@+id/button21"
+        app:layout_constraintBottom_toTopOf="@+id/bp"
         app:layout_constraintEnd_toStartOf="@+id/b3"
         app:layout_constraintStart_toEndOf="@+id/b1"
         app:layout_constraintTop_toBottomOf="@+id/b5" />
@@ -186,7 +185,7 @@
         android:layout_marginBottom="8dp"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/bsin"
-        app:layout_constraintEnd_toStartOf="@+id/button21"
+        app:layout_constraintEnd_toStartOf="@+id/bp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/b1" />
 
@@ -216,7 +215,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btan"
         app:layout_constraintStart_toEndOf="@+id/bsin"
-        app:layout_constraintTop_toBottomOf="@+id/button21" />
+        app:layout_constraintTop_toBottomOf="@+id/bp" />
 
     <Button
         android:id="@+id/btan"
@@ -271,18 +270,18 @@
         android:text="+"
         app:layout_constraintBottom_toTopOf="@+id/btan"
         app:layout_constraintEnd_toStartOf="@+id/br"
-        app:layout_constraintStart_toEndOf="@+id/button21"
+        app:layout_constraintStart_toEndOf="@+id/bp"
         app:layout_constraintTop_toBottomOf="@+id/b3" />
 
     <Button
-        android:id="@+id/button21"
+        android:id="@+id/bp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Button"
+        android:text="."
         app:layout_constraintBottom_toTopOf="@+id/bcos"
         app:layout_constraintEnd_toStartOf="@+id/bs"
         app:layout_constraintStart_toEndOf="@+id/b0"
@@ -290,7 +289,7 @@
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="598dp"
+        android:layout_width="395dp"
         android:layout_height="219dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
@@ -299,6 +298,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.104" />
+
+    <TextView
+        android:id="@+id/restext"
+        android:layout_width="395dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
 
 </android.support.constraint.ConstraintLayout>

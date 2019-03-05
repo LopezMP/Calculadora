@@ -26,7 +26,11 @@ public class MainActivity extends AppCompatActivity {
     Button bsin;
     Button bcos;
     Button btan;
-    TextView pantalla;
+    Button bp;
+    TextView pantalla, respant;
+    String operacion;
+    Double res;
+
 
     public void init(){
 
@@ -48,8 +52,10 @@ public class MainActivity extends AppCompatActivity {
         bcos = findViewById(R.id.bcos);
         btan = findViewById(R.id.btan);
         bres = findViewById(R.id.bres);
+        bp = findViewById(R.id.bp);
         bc = findViewById(R.id.bc);
         pantalla = findViewById(R.id.text);
+        respant = findViewById(R.id.restext);
 
 
     }
@@ -59,84 +65,125 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"0");
+                respant.setText(respant.getText().toString()+"0");
             }
         });
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"1");
+                respant.setText(respant.getText().toString()+"1");
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"2");
+                respant.setText(respant.getText().toString()+"2");
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"3");
+                respant.setText(respant.getText().toString()+"3");
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"4");
+                respant.setText(respant.getText().toString()+"4");
             }
         });
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"5");
+                respant.setText(respant.getText().toString()+"5");
             }
         });
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"6");
+                respant.setText(respant.getText().toString()+"6");
             }
         });
         b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"7");
+                respant.setText(respant.getText().toString()+"7");
             }
         });
         b8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"8");
+                respant.setText(respant.getText().toString()+"8");
             }
         });
         b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"9");
+                respant.setText(respant.getText().toString()+"9");
             }
         });
         bd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pantalla.setText(pantalla.getText().toString()+"/");
+                operacion = "/";
+                res = res / Double.parseDouble(respant.getText().toString());
+                respant.setText("");
+
             }
         });
         bm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"*");
+                res = res * Double.parseDouble(respant.getText().toString());
+                respant.setText("");
             }
         });
         br.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"-");
+                res = res - Double.parseDouble(respant.getText().toString());
+                respant.setText("");
             }
         });
         bs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pantalla.setText(pantalla.getText().toString()+"+");
+                res = res + Double.parseDouble(respant.getText().toString());
+                respant.setText("");
+            }
+        });
+        bres.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pantalla.setText(pantalla.getText().toString());
+                respant.setText(String.valueOf(res));
+            }
+        });
+        bc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pantalla.setText("");
+                res = 0.0;
+                respant.setText("");
+            }
+        });
+        bp. setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pantalla.setText(pantalla.getText().toString()+".");
+                respant.setText(respant.getText().toString()+".");
             }
         });
     }
@@ -147,7 +194,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
-        teclear();
+        while (1){
+            teclear();
+        }
 
     }
 }
